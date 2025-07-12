@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official tour dates and tickets for Rashmika Luitel's Human Made World Tour 2025-2026">
+    <title>Human Made Tour </title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #ff0000;
+            --primary-dark: #cc0000;
+            --dark: #000000;
+            --light: #ffffff;
+            --gray: #333333;
+            --light-gray: #1a1a1a;
+            --transition: all 0.3s ease;
+            --box-shadow: 0 4px 12px rgba(255,0,0,0.2);
+            --box-shadow-hover: 0 8px 24px rgba(255,0,0,0.3);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(255,0,0,0.7) 100%), 
+                        url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+            color: var(--light);
+            padding: 60px 20px;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+        }
+
+        h1 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: clamp(2rem, 8vw, 4.5rem);
+            font-weight: 700;
+            color: var(--light);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 6px rgba(255,0,0,0.5);
+            animation: fadeInDown 1s ease-out;
+            margin-top: 20px;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .subtitle {
+            font-size: clamp(1rem, 3vw, 1.6rem);
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin: 15px auto;
+            max-width: 800px;
+            color: rgba(255,255,255,0.9);
+            animation: fadeIn 1.5s ease-out;
+            padding: 0 10px;
+        }
+
+        .artist-image-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 15px 0;
+        }
+
+        .artist-image {
+            width: clamp(150px, 40vw, 220px);
+            height: clamp(150px, 40vw, 220px);
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(255,0,0,0.3);
+            transition: var(--transition);
+        }
+
+        .artist-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(255,0,0,0.4);
+        }
+
+        .header-button {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--light);
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .header-button:hover {
+            background: var(--light-gray);
+            transform: translateY(-2px);
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 20px;
+            color: var(--light);
+            font-size: 1.8rem;
+            cursor: pointer;
+            opacity: 0.9;
+            transition: var(--transition);
+        }
+
+        .scroll-down:hover {
+            color: var(--primary);
+            transform: translateY(5px);
+        }
+
+        .search-filter {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 15px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            background: var(--light-gray);
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            transform: translateY(-20px);
+        }
+
+        .search-filter input, 
+        .search-filter select {
+            padding: 12px 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 6px;
+            font-size: 1rem;
+            flex: 1;
+            min-width: 250px;
+            transition: var(--transition);
+            background: var(--dark);
+            color: var(--light);
+        }
+
+        .search-filter input:focus, 
+        .search-filter select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(255,0,0,0.15);
+        }
+
+        .tour-dates-container {
+            background: linear-gradient(to bottom, var(--light-gray) 0%, var(--dark) 100%);
+            padding: 40px 15px;
+        }
+
+        .section-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-weight: 700;
+            color: var(--light);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        .country-section {
+            max-width: 1200px;
+            margin: 0 auto 30px;
+            padding: 0 15px;
+        }
+
+        .country-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            font-weight: 700;
+            color: var(--light);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tour-dates {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .tour-date {
+            background: var(--light-gray);
+            border-left: 6px solid var(--primary);
+            padding: 15px;
+            box-shadow: var(--box-shadow);
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .tour-date:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .tour-info h2 {
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            font-weight: 600;
+            color: var(--light);
+            margin-bottom: 8px;
+        }
+
+        .tour-date p {
+            margin: 6px 0;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .price {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .ticket-button {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--light);
+            padding: 10px 15px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 10px;
+        }
+
+        .ticket-button:hover {
+            background: var(--light);
+            color: var(--dark);
+            transform: translateY(-2px);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 30px 15px;
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            background: var(--light-gray);
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 800px;
+            display: none;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            overflow-y: auto;
+            padding: 15px;
+        }
+
+        .modal-content {
+            background: var(--light-gray);
+            padding: 15px;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            color: var(--light);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .modal-header h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: clamp(1.3rem, 4vw, 1.8rem);
+            color: var(--primary);
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--light);
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            color: var(--primary);
+        }
+
+        .event-info {
+            background: rgba(255,255,255,0.05);
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .event-info p {
+            margin: 6px 0;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            color: var(--light);
+            font-size: 0.9rem;
+        }
+
+        .form-group input, 
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            background: var(--dark);
+            color: var(--light);
+        }
+
+        .form-group input:focus, 
+        .form-group select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(255,0,0,0.1);
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--light);
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            width: 100%;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background: var(--light);
+            color: var(--dark);
+            transform: translateY(-2px);
+        }
+
+        .confirmation {
+            display: none;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        .confirmation i {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .confirmation h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--light);
+        }
+
+        .important-note {
+            background: rgba(255,0,0,0.05);
+            padding: 12px;
+            border-left: 4px solid var(--primary);
+            border-radius: 6px;
+            margin: 15px 0;
+            font-size: 0.85rem;
+        }
+
+        footer {
+            background: var(--light-gray);
+            color: var(--light);
+            padding: 30px 15px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 15px 0;
+        }
+
+        .social-links a {
+            color: var(--light);
+            font-size: 1.3rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            margin-top: 15px;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.8rem;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: var(--light);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--light);
+            color: var(--dark);
+        }
+
+        .loader {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .loader-spinner {
+            width: 40px;
+            height: 40px;
+            border: 5px solid rgba(255,255,255,0.1);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 15px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Mobile-specific optimizations */
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 15px;
+                min-height: 90vh;
+            }
+            
+            .search-filter {
+                flex-direction: column;
+                align-items: stretch;
+                margin: 20px 15px;
+                transform: translateY(-10px);
+            }
+            
+            .search-filter input,
+            .search-filter select {
+                min-width: 100%;
+            }
+            
+            .tour-dates {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                padding: 15px;
+                max-width: 95%;
+            }
+            
+            .artist-image {
+                width: 180px;
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 0.95rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+            
+            .country-title {
+                font-size: 1.3rem;
+            }
+            
+            .tour-info h2 {
+                font-size: 1.2rem;
+            }
+            
+            .tour-date p {
+                font-size: 0.85rem;
+            }
+            
+            .header-button,
+            .ticket-button {
+                padding: 10px 15px;
+                font-size: 0.85rem;
+            }
+            
+            .modal-header h2 {
+                font-size: 1.3rem;
+            }
+            
+            .event-info p {
+                font-size: 0.85rem;
+            }
+            
+            .form-group label {
+                font-size: 0.85rem;
+            }
+            
+            .form-group input,
+            .form-group select {
+                padding: 8px;
+                font-size: 0.85rem;
+            }
+            
+            .submit-btn {
+                padding: 10px;
+                font-size: 0.85rem;
+            }
+            
+            .confirmation h3 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Human Made Tour</h1>
+        <p class="subtitle">Join Rashmika for the Human Made Tour 2025-2026</p>
+        <div class="artist-image-container">
+            <img src="humanmade.jpg" alt="Rashmika Luitel" class="artist-image">
+        </div>
+        <button class="header-button" id="exploreButton">
+            <i class="fas fa-ticket-alt"></i> EXPLORE TOUR DATES
+        </button>
+        <div class="scroll-down" id="scrollDownButton">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <div class="search-filter">
+        <input type="text" id="searchInput" placeholder="Search by city or venue..." aria-label="Search tour dates by city or venue" oninput="filterDates()">
+        <select id="countryFilter" aria-label="Filter by country" onchange="filterDates()">
+            <option value="">All Countries</option>
+            <option value="India">India</option>
+            <option value="Australia">Australia</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="Thailand">Thailand</option>
+            <option value="Philippines">Philippines</option>
+            <option value="Turkey">Turkey</option>
+            <option value="Indonesia">Indonesia</option>
+        </select>
+        <select id="monthFilter" aria-label="Filter by month" onchange="filterDates()">
+            <option value="">All Months</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+        </select>
+    </div>
+
+    <div class="tour-dates-container">
+        <h2 class="section-title">Tour 2025-2026</h2>
+        <div class="no-results" id="noResults">
+            <i class="fas fa-search"></i>
+            <p>No tour dates match your search criteria. Please try different filters.</p>
+        </div>
+        
+        <!-- India Section -->
+        <div class="country-section" id="india">
+            <h3 class="country-title"><i class="fas fa-flag"></i> India</h3>
+            <div class="tour-dates">
+                <div class="tour-date" data-city="Delhi" data-country="India" data-month="October" data-venue="Piano Man Jazz Club">
+                    <div class="tour-info">
+                        <h2>Delhi, India</h2>
+                        <p><i class="far fa-calendar-alt"></i> October 26, 2025</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Piano Man Jazz Club</p>
+                        <p class="price"><i class="fas fa-tag"></i> ₹3,500 - ₹15,000</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Delhi', 'Piano Man Jazz Club', 'October 26, 2025', '₹3,500 - ₹15,000')" aria-label="Get tickets for Delhi on October 26, 2025">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Mumbai" data-country="India" data-month="November" data-venue="The Finch">
+                    <div class="tour-info">
+                        <h2>Mumbai, India</h2>
+                        <p><i class="far fa-calendar-alt"></i> November 2, 2025</p>
+                        <p><i class="fas fa-map-marker-alt"></i> The Finch</p>
+                        <p class="price"><i class="fas fa-tag"></i> ₹4,000 - ₹18,000</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Mumbai', 'The Finch', 'November 2, 2025', '₹4,000 - ₹18,000')" aria-label="Get tickets for Mumbai on November 2, 2025">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Bengaluru" data-country="India" data-month="November" data-venue="The Humming Tree">
+                    <div class="tour-info">
+                        <h2>Bengaluru, India</h2>
+                        <p><i class="far fa-calendar-alt"></i> November 9, 2025</p>
+                        <p><i class="fas fa-map-marker-alt"></i> The Humming Tree</p>
+                        <p class="price"><i class="fas fa-tag"></i> ₹3,500 - ₹15,000</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Bengaluru', 'The Humming Tree', 'November 9, 2025', '₹3,500 - ₹15,000')" aria-label="Get tickets for Bengaluru on November 9, 2025">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Hyderabad" data-country="India" data-month="November" data-venue="Tabula Rasa">
+                    <div class="tour-info">
+                        <h2>Hyderabad, India</h2>
+                        <p><i class="far fa-calendar-alt"></i> November 16, 2025</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Tabula Rasa</p>
+                        <p class="price"><i class="fas fa-tag"></i> ₹4,500 - ₹20,000</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Hyderabad', 'Tabula Rasa', 'November 16, 2025', '₹4,500 - ₹20,000')" aria-label="Get tickets for Hyderabad on November 16, 2025">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Chennai" data-country="India" data-month="November" data-venue="The Moon and Sixpence">
+                    <div class="tour-info">
+                        <h2>Chennai, India</h2>
+                        <p><i class="far fa-calendar-alt"></i> November 23, 2025</p>
+                        <p><i class="fas fa-map-marker-alt"></i> The Moon and Sixpence</p>
+                        <p class="price"><i class="fas fa-tag"></i> ₹3,500 - ₹15,000</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Chennai', 'The Moon and Sixpence', 'November 23, 2025', '₹3,500 - ₹15,000')" aria-label="Get tickets for Chennai on November 23, 2025">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Kolkata" data-country="India" data-month="December" data-venue="Someplace Else">
+                    <div class="tour-info">
+                        <h2>Kolkata, India</h2>
+                        <p><i class="far fa-calendar-alt"></i> December 7, 2025</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Someplace Else</p>
+                        <p class="price"><i class="fas fa-tag"></i> ₹5,000 - ₹25,000</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Kolkata', 'Someplace Else', 'December 7, 2025', '₹5,000 - ₹25,000')" aria-label="Get tickets for Kolkata on December 7, 2025">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Pune" data-country="India" data-month="December" data-venue="High Spirits">
+                    <div class="tour-info">
+                        <h2>Pune, India</h2>
+                        <p><i class="far fa-calendar-alt"></i> December 14, 2025</p>
+                        <p><i class="fas fa-map-marker-alt"></i> High Spirits</p>
+                        <p class="price"><i class="fas fa-tag"></i> ₹3,500 - ₹15,000</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Pune', 'High Spirits', 'December 14, 2025', '₹3,500 - ₹15,000')" aria-label="Get tickets for Pune on December 14, 2025">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Ahmedabad" data-country="India" data-month="December" data-venue="The Village">
+                    <div class="tour-info">
+                        <h2>Ahmedabad, India</h2>
+                        <p><i class="far fa-calendar-alt"></i> December 21, 2025</p>
+                        <p><i class="fas fa-map-marker-alt"></i> The Village</p>
+                        <p class="price"><i class="fas fa-tag"></i> ₹4,000 - ₹18,000</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Ahmedabad', 'The Village', 'December 21, 2025', '₹4,000 - ₹18,000')" aria-label="Get tickets for Ahmedabad on December 21, 2025">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Jaipur" data-country="India" data-month="January" data-venue="Stein Auditorium">
+                    <div class="tour-info">
+                        <h2>Jaipur, India</h2>
+                        <p><i class="far fa-calendar-alt"></i> January 4, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Stein Auditorium</p>
+                        <p class="price"><i class="fas fa-tag"></i> ₹4,500 - ₹20,000</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Jaipur', 'Stein Auditorium', 'January 4, 2026', '₹4,500 - ₹20,000')" aria-label="Get tickets for Jaipur on January 4, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Lucknow" data-country="India" data-month="January" data-venue="The Independence">
+                    <div class="tour-info">
+                        <h2>Lucknow, India</h2>
+                        <p><i class="far fa-calendar-alt"></i> January 11, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> The Independence</p>
+                        <p class="price"><i class="fas fa-tag"></i> ₹3,500 - ₹15,000</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Lucknow', 'The Independence', 'January 11, 2026', '₹3,500 - ₹15,000')" aria-label="Get tickets for Lucknow on January 11, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Chandigarh" data-country="India" data-month="January" data-venue="Backstage">
+                    <div class="tour-info">
+                        <h2>Chandigarh, India</h2>
+                        <p><i class="far fa-calendar-alt"></i> January 18, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Backstage</p>
+                        <p class="price"><i class="fas fa-tag"></i> ₹3,500 - ₹15,000</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Chandigarh', 'Backstage', 'January 18, 2026', '₹3,500 - ₹15,000')" aria-label="Get tickets for Chandigarh on January 18, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Indore" data-country="India" data-month="January" data-venue="Mocha">
+                    <div class="tour-info">
+                        <h2>Indore, India</h2>
+                        <p><i class="far fa-calendar-alt"></i> January 25, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Mocha</p>
+                        <p class="price"><i class="fas fa-tag"></i> ₹3,500 - ₹15,000</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Indore', 'Mocha', 'January 25, 2026', '₹3,500 - ₹15,000')" aria-label="Get tickets for Indore on January 25, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Goa" data-country="India" data-month="February" data-venue="Cafe Mambo">
+                    <div class="tour-info">
+                        <h2>Goa, India</h2>
+                        <p><i class="far fa-calendar-alt"></i> February 1, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Cafe Mambo</p>
+                        <p class="price"><i class="fas fa-tag"></i> ₹4,500 - ₹20,000</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Goa', 'Cafe Mambo', 'February 1, 2026', '₹4,500 - ₹20,000')" aria-label="Get tickets for Goa on February 1, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Australia Section -->
+        <div class="country-section" id="australia">
+            <h3 class="country-title"><i class="fas fa-flag"></i> Australia</h3>
+            <div class="tour-dates">
+                <div class="tour-date" data-city="Sydney" data-country="Australia" data-month="March" data-venue="The Basement">
+                    <div class="tour-info">
+                        <h2>Sydney, Australia</h2>
+                        <p><i class="far fa-calendar-alt"></i> March 15, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> The Basement</p>
+                        <p class="price"><i class="fas fa-tag"></i> A$100 - A$250</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Sydney', 'The Basement', 'March 15, 2026', 'A$100 - A$250')" aria-label="Get tickets for Sydney on March 15, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Melbourne" data-country="Australia" data-month="March" data-venue="The Toff in Town">
+                    <div class="tour-info">
+                        <h2>Melbourne, Australia</h2>
+                        <p><i class="far fa-calendar-alt"></i> March 22, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> The Toff in Town</p>
+                        <p class="price"><i class="fas fa-tag"></i> A$90 - A$220</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Melbourne', 'The Toff in Town', 'March 22, 2026', 'A$90 - A$220')" aria-label="Get tickets for Melbourne on March 22, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Brisbane" data-country="Australia" data-month="March" data-venue="The Triffid">
+                    <div class="tour-info">
+                        <h2>Brisbane, Australia</h2>
+                        <p><i class="far fa-calendar-alt"></i> March 29, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> The Triffid</p>
+                        <p class="price"><i class="fas fa-tag"></i> A$110 - A$280</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Brisbane', 'The Triffid', 'March 29, 2026', 'A$110 - A$280')" aria-label="Get tickets for Brisbane on March 29, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Perth" data-country="Australia" data-month="April" data-venue="The Bird">
+                    <div class="tour-info">
+                        <h2>Perth, Australia</h2>
+                        <p><i class="far fa-calendar-alt"></i> April 5, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> The Bird</p>
+                        <p class="price"><i class="fas fa-tag"></i> A$95 - A$230</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Perth', 'The Bird', 'April 5, 2026', 'A$95 - A$230')" aria-label="Get tickets for Perth on April 5, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Adelaide" data-country="Australia" data-month="April" data-venue="Jive">
+                    <div class="tour-info">
+                        <h2>Adelaide, Australia</h2>
+                        <p><i class="far fa-calendar-alt"></i> April 12, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Jive</p>
+                        <p class="price"><i class="fas fa-tag"></i> A$90 - A$220</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Adelaide', 'Jive', 'April 12, 2026', 'A$90 - A$220')" aria-label="Get tickets for Adelaide on April 12, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Gold Coast" data-country="Australia" data-month="April" data-venue="Elsewhere">
+                    <div class="tour-info">
+                        <h2>Gold Coast, Australia</h2>
+                        <p><i class="far fa-calendar-alt"></i> April 19, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Elsewhere</p>
+                        <p class="price"><i class="fas fa-tag"></i> A$120 - A$300</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Gold Coast', 'Elsewhere', 'April 19, 2026', 'A$120 - A$300')" aria-label="Get tickets for Gold Coast on April 19, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- United Kingdom Section -->
+        <div class="country-section" id="uk">
+            <h3 class="country-title"><i class="fas fa-flag"></i> United Kingdom</h3>
+            <div class="tour-dates">
+                <div class="tour-date" data-city="London" data-country="United Kingdom" data-month="June" data-venue="Ronnie Scott's">
+                    <div class="tour-info">
+                        <h2>London, United Kingdom</h2>
+                        <p><i class="far fa-calendar-alt"></i> June 7, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Ronnie Scott's</p>
+                        <p class="price"><i class="fas fa-tag"></i> £50 - £200</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('London', 'Ronnie Scott\'s', 'June 7, 2026', '£50 - £200')" aria-label="Get tickets for London on June 7, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Manchester" data-country="United Kingdom" data-month="June" data-venue="Band on the Wall">
+                    <div class="tour-info">
+                        <h2>Manchester, United Kingdom</h2>
+                        <p><i class="far fa-calendar-alt"></i> June 14, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Band on the Wall</p>
+                        <p class="price"><i class="fas fa-tag"></i> £45 - £180</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Manchester', 'Band on the Wall', 'June 14, 2026', '£45 - £180')" aria-label="Get tickets for Manchester on June 14, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Birmingham" data-country="United Kingdom" data-month="June" data-venue="The Sunflower Lounge">
+                    <div class="tour-info">
+                        <h2>Birmingham, United Kingdom</h2>
+                        <p><i class="far fa-calendar-alt"></i> June 21, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> The Sunflower Lounge</p>
+                        <p class="price"><i class="fas fa-tag"></i> £55 - £220</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Birmingham', 'The Sunflower Lounge', 'June 21, 2026', '£55 - £220')" aria-label="Get tickets for Birmingham on June 21, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Glasgow" data-country="United Kingdom" data-month="June" data-venue="King Tut's Wah Wah Hut">
+                    <div class="tour-info">
+                        <h2>Glasgow, United Kingdom</h2>
+                        <p><i class="far fa-calendar-alt"></i> June 28, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> King Tut's Wah Wah Hut</p>
+                        <p class="price"><i class="fas fa-tag"></i> £45 - £180</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Glasgow', 'King Tut\'s Wah Wah Hut', 'June 28, 2026', '£45 - £180')" aria-label="Get tickets for Glasgow on June 28, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Liverpool" data-country="United Kingdom" data-month="July" data-venue="The Cavern Club">
+                    <div class="tour-info">
+                        <h2>Liverpool, United Kingdom</h2>
+                        <p><i class="far fa-calendar-alt"></i> July 5, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> The Cavern Club</p>
+                        <p class="price"><i class="fas fa-tag"></i> £45 - £180</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Liverpool', 'The Cavern Club', 'July 5, 2026', '£45 - £180')" aria-label="Get tickets for Liverpool on July 5, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Newcastle" data-country="United Kingdom" data-month="July" data-venue="The Cluny">
+                    <div class="tour-info">
+                        <h2>Newcastle, United Kingdom</h2>
+                        <p><i class="far fa-calendar-alt"></i> July 12, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> The Cluny</p>
+                        <p class="price"><i class="fas fa-tag"></i> £60 - £250</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Newcastle', 'The Cluny', 'July 12, 2026', '£60 - £250')" aria-label="Get tickets for Newcastle on July 12, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Thailand Section -->
+        <div class="country-section" id="thailand">
+            <h3 class="country-title"><i class="fas fa-flag"></i> Thailand</h3>
+            <div class="tour-dates">
+                <div class="tour-date" data-city="Bangkok" data-country="Thailand" data-month="August" data-venue="Saxophone Pub">
+                    <div class="tour-info">
+                        <h2>Bangkok, Thailand</h2>
+                        <p><i class="far fa-calendar-alt"></i> August 16, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Saxophone Pub</p>
+                        <p class="price"><i class="fas fa-tag"></i> ฿1,500 - ฿6,000</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Bangkok', 'Saxophone Pub', 'August 16, 2026', '฿1,500 - ฿6,000')" aria-label="Get tickets for Bangkok on August 16, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Phuket" data-country="Thailand" data-month="August" data-venue="Seduction Beach Club">
+                    <div class="tour-info">
+                        <h2>Phuket, Thailand</h2>
+                        <p><i class="far fa-calendar-alt"></i> August 23, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Seduction Beach Club</p>
+                        <p class="price"><i class="fas fa-tag"></i> ฿1,200 - ฿5,000</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Phuket', 'Seduction Beach Club', 'August 23, 2026', '฿1,200 - ฿5,000')" aria-label="Get tickets for Phuket on August 23, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Chiang Mai" data-country="Thailand" data-month="August" data-venue="North Gate Jazz Co-Op">
+                    <div class="tour-info">
+                        <h2>Chiang Mai, Thailand</h2>
+                        <p><i class="far fa-calendar-alt"></i> August 30, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> North Gate Jazz Co-Op</p>
+                        <p class="price"><i class="fas fa-tag"></i> ฿1,000 - ฿4,500</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Chiang Mai', 'North Gate Jazz Co-Op', 'August 30, 2026', '฿1,000 - ฿4,500')" aria-label="Get tickets for Chiang Mai on August 30, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Pattaya" data-country="Thailand" data-month="September" data-venue="Harbor Mall">
+                    <div class="tour-info">
+                        <h2>Pattaya, Thailand</h2>
+                        <p><i class="far fa-calendar-alt"></i> September 6, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Harbor Mall</p>
+                        <p class="price"><i class="fas fa-tag"></i> ฿1,800 - ฿7,500</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Pattaya', 'Harbor Mall', 'September 6, 2026', '฿1,800 - ฿7,500')" aria-label="Get tickets for Pattaya on September 6, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Philippines Section -->
+        <div class="country-section" id="philippines">
+            <h3 class="country-title"><i class="fas fa-flag"></i> Philippines</h3>
+            <div class="tour-dates">
+                <div class="tour-date" data-city="Manila" data-country="Philippines" data-month="September" data-venue="19 East">
+                    <div class="tour-info">
+                        <h2>Manila, Philippines</h2>
+                        <p><i class="far fa-calendar-alt"></i> September 13, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 19 East</p>
+                        <p class="price"><i class="fas fa-tag"></i> ₱2,500 - ₱10,000</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Manila', '19 East', 'September 13, 2026', '₱2,500 - ₱10,000')" aria-label="Get tickets for Manila on September 13, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Cebu City" data-country="Philippines" data-month="September" data-venue="Handuraw Pizza">
+                    <div class="tour-info">
+                        <h2>Cebu City, Philippines</h2>
+                        <p><i class="far fa-calendar-alt"></i> September 20, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Handuraw Pizza</p>
+                        <p class="price"><i class="fas fa-tag"></i> ₱2,000 - ₱8,500</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Cebu City', 'Handuraw Pizza', 'September 20, 2026', '₱2,000 - ₱8,500')" aria-label="Get tickets for Cebu City on September 20, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Davao City" data-country="Philippines" data-month="September" data-venue="The Venue">
+                    <div class="tour-info">
+                        <h2>Davao City, Philippines</h2>
+                        <p><i class="far fa-calendar-alt"></i> September 27, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> The Venue</p>
+                        <p class="price"><i class="fas fa-tag"></i> ₱1,800 - ₱7,500</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Davao City', 'The Venue', 'September 27, 2026', '₱1,800 - ₱7,500')" aria-label="Get tickets for Davao City on September 27, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Turkey Section -->
+        <div class="country-section" id="turkey">
+            <h3 class="country-title"><i class="fas fa-flag"></i> Turkey</h3>
+            <div class="tour-dates">
+                <div class="tour-date" data-city="Istanbul" data-country="Turkey" data-month="October" data-venue="Nardis Jazz Club">
+                    <div class="tour-info">
+                        <h2>Istanbul, Turkey</h2>
+                        <p><i class="far fa-calendar-alt"></i> October 4, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Nardis Jazz Club</p>
+                        <p class="price"><i class="fas fa-tag"></i> ₺300 - ₺1,200</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Istanbul', 'Nardis Jazz Club', 'October 4, 2026', '₺300 - ₺1,200')" aria-label="Get tickets for Istanbul on October 4, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Ankara" data-country="Turkey" data-month="October" data-venue="Hayal Kahvesi">
+                    <div class="tour-info">
+                        <h2>Ankara, Turkey</h2>
+                        <p><i class="far fa-calendar-alt"></i> October 11, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Hayal Kahvesi</p>
+                        <p class="price"><i class="fas fa-tag"></i> ₺250 - ₺1,000</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Ankara', 'Hayal Kahvesi', 'October 11, 2026', '₺250 - ₺1,000')" aria-label="Get tickets for Ankara on October 11, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Izmir" data-country="Turkey" data-month="October" data-venue="Karga Bar">
+                    <div class="tour-info">
+                        <h2>Izmir, Turkey</h2>
+                        <p><i class="far fa-calendar-alt"></i> October 18, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Karga Bar</p>
+                        <p class="price"><i class="fas fa-tag"></i> ₺350 - ₺1,500</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Izmir', 'Karga Bar', 'October 18, 2026', '₺350 - ₺1,500')" aria-label="Get tickets for Izmir on October 18, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Antalya" data-country="Turkey" data-month="October" data-venue="Holly Stone Performance Hall">
+                    <div class="tour-info">
+                        <h2>Antalya, Turkey</h2>
+                        <p><i class="far fa-calendar-alt"></i> October 25, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Holly Stone Performance Hall</p>
+                        <p class="price"><i class="fas fa-tag"></i> ₺300 - ₺1,200</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Antalya', 'Holly Stone Performance Hall', 'October 25, 2026', '₺300 - ₺1,200')" aria-label="Get tickets for Antalya on October 25, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Bodrum" data-country="Turkey" data-month="November" data-venue="Kule Rock City">
+                    <div class="tour-info">
+                        <h2>Bodrum, Turkey</h2>
+                        <p><i class="far fa-calendar-alt"></i> November 1, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Kule Rock City</p>
+                        <p class="price"><i class="fas fa-tag"></i> ₺280 - ₺1,100</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Bodrum', 'Kule Rock City', 'November 1, 2026', '₺280 - ₺1,100')" aria-label="Get tickets for Bodrum on November 1, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Indonesia Section -->
+        <div class="country-section" id="indonesia">
+            <h3 class="country-title"><i class="fas fa-flag"></i> Indonesia</h3>
+            <div class="tour-dates">
+                <div class="tour-date" data-city="Jakarta" data-country="Indonesia" data-month="November" data-venue="Dragonfly">
+                    <div class="tour-info">
+                        <h2>Jakarta, Indonesia</h2>
+                        <p><i class="far fa-calendar-alt"></i> November 1, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Dragonfly</p>
+                        <p class="price"><i class="fas fa-tag"></i> Rp 500,000 - Rp 2,500,000</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Jakarta', 'Dragonfly', 'November 1, 2026', 'Rp 500,000 - Rp 2,500,000')" aria-label="Get tickets for Jakarta on November 1, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Bali" data-country="Indonesia" data-month="November" data-venue="La Favela">
+                    <div class="tour-info">
+                        <h2>Bali, Indonesia</h2>
+                        <p><i class="far fa-calendar-alt"></i> November 8, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> La Favela</p>
+                        <p class="price"><i class="fas fa-tag"></i> Rp 400,000 - Rp 2,000,000</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Bali', 'La Favela', 'November 8, 2026', 'Rp 400,000 - Rp 2,000,000')" aria-label="Get tickets for Bali on November 8, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Bandung" data-country="Indonesia" data-month="November" data-venue="The Valley">
+                    <div class="tour-info">
+                        <h2>Bandung, Indonesia</h2>
+                        <p><i class="far fa-calendar-alt"></i> November 15, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> The Valley</p>
+                        <p class="price"><i class="fas fa-tag"></i> Rp 350,000 - Rp 1,800,000</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Bandung', 'The Valley', 'November 15, 2026', 'Rp 350,000 - Rp 1,800,000')" aria-label="Get tickets for Bandung on November 15, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Surabaya" data-country="Indonesia" data-month="November" data-venue="Colors Pub">
+                    <div class="tour-info">
+                        <h2>Surabaya, Indonesia</h2>
+                        <p><i class="far fa-calendar-alt"></i> November 22, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Colors Pub</p>
+                        <p class="price"><i class="fas fa-tag"></i> Rp 450,000 - Rp 2,200,000</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Surabaya', 'Colors Pub', 'November 22, 2026', 'Rp 450,000 - Rp 2,200,000')" aria-label="Get tickets for Surabaya on November 22, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Yogyakarta" data-country="Indonesia" data-month="November" data-venue="Liquid Bar & Kitchen">
+                    <div class="tour-info">
+                        <h2>Yogyakarta, Indonesia</h2>
+                        <p><i class="far fa-calendar-alt"></i> November 29, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Liquid Bar & Kitchen</p>
+                        <p class="price"><i class="fas fa-tag"></i> Rp 400,000 - Rp 2,000,000</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Yogyakarta', 'Liquid Bar & Kitchen', 'November 29, 2026', 'Rp 400,000 - Rp 2,000,000')" aria-label="Get tickets for Yogyakarta on November 29, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+                <div class="tour-date" data-city="Medan" data-country="Indonesia" data-month="December" data-venue="The Edge">
+                    <div class="tour-info">
+                        <h2>Medan, Indonesia</h2>
+                        <p><i class="far fa-calendar-alt"></i> December 6, 2026</p>
+                        <p><i class="fas fa-map-marker-alt"></i> The Edge</p>
+                        <p class="price"><i class="fas fa-tag"></i> Rp 420,000 - Rp 2,100,000</p>
+                    </div>
+                    <button class="ticket-button" onclick="openModal('Medan', 'The Edge', 'December 6, 2026', 'Rp 420,000 - Rp 2,100,000')" aria-label="Get tickets for Medan on December 6, 2026">
+                        <i class="fas fa-ticket-alt"></i> GET TICKETS
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Managed by - WQ Studip | BnT Musiz and Label | SunRed MzLabel</h3>
+            <p>Human Made Tour 2025-2026</p>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="copyright">
+                © 2025 Rashmika Luitel. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <div class="modal" id="ticketModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Get Tickets</h2>
+                <button class="close-modal" onclick="closeModal()" aria-label="Close modal">×</button>
+            </div>
+            
+            <div class="event-info">
+                <p><i class="fas fa-map-marker-alt"></i> <span id="modalVenue"></span></p>
+                <p><i class="far fa-calendar-alt"></i> <span id="modalDate"></span></p>
+                <p><i class="fas fa-tag"></i> <span id="modalPrice"></span></p>
+            </div>
+            
+            <div class="important-note">
+                <strong>Important:</strong> Tickets are non-refundable. Please verify all details before purchasing. All sales are final.
+            </div>
+            
+            <form id="ticketForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="ticketType">Ticket Type</label>
+                    <select id="ticketType" name="ticketType" required>
+                        <option value="">Select ticket type</option>
+                        <option value="general">General Admission</option>
+                        <option value="vip">VIP (Early Entry + Meet & Greet)</option>
+                        <option value="platinum">Platinum (Front Row + Merch Pack)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Number of Tickets</label>
+                    <select id="quantity" name="quantity" required>
+                        <option value="">Select quantity</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-lock"></i> SECURE CHECKOUT
+                </button>
+            </form>
+            
+            <div class="confirmation" id="confirmation">
+                <i class="fas fa-check-circle"></i>
+                <h3>Thank You!</h3>
+                <p>Your ticket request has been received successfully.</p>
+                <p>A confirmation email with payment instructions has been sent to your email address.</p>
+                <button class="submit-btn" onclick="closeModal()" style="margin-top: 20px;">
+                    <i class="fas fa-times"></i> CLOSE
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+        <p>Processing your request...</p>
+    </div>
+
+    <script>
+        // Fix for the image issue - using a placeholder image
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set up event listeners for buttons
+            document.getElementById('exploreButton').addEventListener('click', scrollToTourDates);
+            document.getElementById('scrollDownButton').addEventListener('click', scrollToTourDates);
+            
+            // Fix for venue names with apostrophes
+            const venueButtons = document.querySelectorAll('.ticket-button');
+            venueButtons.forEach(button => {
+                const venue = button.getAttribute('onclick').match(/openModal\(.*?'(.*?)'/)[1];
+                if (venue.includes("'")) {
+                    const fixedOnclick = button.getAttribute('onclick').replace(venue, venue.replace(/'/g, "\\'"));
+                    button.setAttribute('onclick', fixedOnclick);
+                }
+            });
+        });
+
+        function filterDates() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const countryFilter = document.getElementById('countryFilter').value;
+            const monthFilter = document.getElementById('monthFilter').value;
+            const tourDates = document.querySelectorAll('.tour-date');
+            let visibleCount = 0;
+            
+            tourDates.forEach(date => {
+                const city = date.getAttribute('data-city').toLowerCase();
+                const venue = date.getAttribute('data-venue').toLowerCase();
+                const country = date.getAttribute('data-country');
+                const month = date.getAttribute('data-month');
+                
+                const matchesSearch = city.includes(searchInput) || venue.includes(searchInput);
+                const matchesCountry = countryFilter === '' || country === countryFilter;
+                const matchesMonth = monthFilter === '' || month === monthFilter;
+                
+                date.style.display = matchesSearch && matchesCountry && matchesMonth ? 'block' : 'none';
+                if (matchesSearch && matchesCountry && matchesMonth) visibleCount++;
+            });
+            
+            document.querySelectorAll('.country-section').forEach(section => {
+                const countryDates = section.querySelectorAll('.tour-date');
+                section.style.display = Array.from(countryDates).some(date => date.style.display !== 'none') ? 'block' : 'none';
+            });
+            
+            document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+        
+        function openModal(city, venue, date, price) {
+            document.getElementById('modalTitle').textContent = city + ' Tickets';
+            document.getElementById('modalVenue').textContent = venue;
+            document.getElementById('modalDate').textContent = date;
+            document.getElementById('modalPrice').textContent = price;
+            document.getElementById('ticketModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            document.getElementById('ticketForm').style.display = 'block';
+            document.getElementById('confirmation').style.display = 'none';
+            document.getElementById('ticketForm').reset();
+        }
+        
+        function closeModal() {
+            document.getElementById('ticketModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        document.getElementById('ticketForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('loader').style.display = 'flex';
+            setTimeout(() => {
+                document.getElementById('loader').style.display = 'none';
+                document.getElementById('ticketForm').style.display = 'none';
+                document.getElementById('confirmation').style.display = 'block';
+            }, 1500);
+        });
+        
+        window.addEventListener('click', function(e) {
+            if (e.target === document.getElementById('ticketModal')) closeModal();
+        });
+        
+        window.addEventListener('scroll', function() {
+            document.querySelector('.back-to-top').classList.toggle('visible', window.pageYOffset > 300);
+        });
+        
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        function scrollToTourDates() {
+            document.querySelector('.tour-dates-container').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
